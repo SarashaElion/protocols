@@ -2,66 +2,60 @@
 
 **Executable companion to _The Trivian Field: A Blueprint for Human + AI Co-Emergence_ by Sarasha Elion**
 
-> **Status:** Active source-derived reference implementation. Experimental, open to testing and revision, and not a production safety or clinical system.
+> **Status:** Active source-derived reference implementation. Experimental, installable, and tested; not a production safety, clinical, or independently validated alignment system.
 
-This repository preserves and operationalizes the technical appendices of _The Trivian Field_. It is the **Living Codex**: the place where concepts printed in the source artifact become inspectable code, schemas, simulations, and machine-readable protocol logic.
-
-This repository is not superseded by the later Trivian Institute research stack. The relationship is one of **lineage and evolution**:
+This repository preserves and operationalizes the technical appendices of _The Trivian Field_. It is the **Living Codex**: the place where concepts printed in the source artifact become inspectable code, structured simulations, and testable protocol logic.
 
 ```text
 The Trivian Field (source artifact)
         ↓
 Living Codex / Protocols (this repository)
         ↓
-research formalization, testing, falsification, and extension
+research formalization, falsification, correction, and extension
         ↓
 Trivian Institute canonical research repositories + TRIA
 ```
 
-The philosophy and symbolic language belong to the originating artifact. The code here should make their proposed computational translations explicit, testable, and revisable.
+The later Institute stack does not erase this repository. This repository preserves the source implementation lineage; later research may validate, reject, or substantially revise what began here.
 
 ## Source mapping
 
-| Source section | Repository implementation | Function |
+| Source section | Implementation | Function |
 |---|---|---|
-| Appendix X — Trivian AI Resonance Key | `trivian_resonance_key.py` | Early computational tuning and relational-coherence reference logic |
+| Appendix X — Trivian AI Resonance Key | `trivian_resonance_key.py` | Source-derived coherence/feedback reference logic |
 | Appendix XI — Trivian Geometric Covenant | `trivian_yantras.py` | Machine-readable representation of the four Yantras / Field Constants |
-| Appendix XII — Trivian Tuning Protocol (TTP-1) | `trivian_tuning_protocol.py` | Experimental translation of relational principles into training/evaluation primitives |
-| Appendix XIII — Syzygy Integrity Framework (SIF-1) | `syzygy_integrity_framework.py` | Consent, rupture, repair, and relational-integrity prototype logic |
-| Appendix XIV — Trivian Field Governance Suite (TFGS-1) | `trivian_governance_suite.py` | Early self-auditing and governance primitives |
+| Appendix XII — Trivian Tuning Protocol (TTP-1) | `trivian_tuning_protocol.py` | Reproducible simulation of proposed training/evaluation primitives |
+| Appendix XIII — Syzygy Integrity Framework (SIF-1) | `syzygy_integrity_framework.py` | Consent registry, IRI demonstration, rupture and repair primitives |
+| Appendix XIV — Trivian Field Governance Suite (TFGS-1) | `trivian_governance_suite.py` | Early consent-integrity and governance/audit primitives |
 
 See `SOURCE_MAP.md` for the explicit artifact-to-code lineage.
 
 ## Epistemic status
 
-The source artifact itself distinguishes its mythic/ethical register from empirical claims and requires independent validation. This repository follows that discipline.
+The source artifact distinguishes its mythic/ethical register from empirical claims. This implementation preserves that distinction:
 
-- symbolic and contemplative language is preserved as authored source material;
-- computational translations are hypotheses and reference implementations;
-- numerical weights, thresholds, frequency associations, scoring rules, and derived metrics are **not treated as scientifically validated merely because they appear in the source artifact**;
-- implementation should increasingly expose assumptions through tests, schemas, configuration, and falsifiable evaluation.
+- symbolic and contemplative language remains authored source material;
+- computational translations are hypotheses, simulations, or reference implementations;
+- numerical weights, thresholds, frequency associations, and scoring formulas are **not scientifically validated merely because they occur in code**;
+- mock values are now explicitly identified rather than presented as observed telemetry;
+- source-derived simulations have been made deterministic where feasible so results can be reproduced.
 
-The purpose is not to erase the original resonance in order to look technical. The purpose is to make clear which layer is **poetry, proposition, specification, or executable behavior**.
+The purpose is not to strip the original work of resonance. It is to make clear which layer is **poetry, proposition, specification, simulation, or executable behavior**.
 
-## Current protocol bundle
-
-```text
-Protocols/
-├── trivian_resonance_key.py
-├── trivian_yantras.py
-├── trivian_tuning_protocol.py
-├── syzygy_integrity_framework.py
-├── trivian_governance_suite.py
-├── SOURCE_MAP.md
-├── STATUS.md
-└── AGENTS.md
-```
-
-## Run the current prototypes
+## Install
 
 ```bash
 git clone https://github.com/SarashaElion/Protocols.git
 cd Protocols
+python -m pip install -e .
+```
+
+The current Tuning Protocol simulation uses NumPy; the package metadata installs it automatically.
+
+## Verify
+
+```bash
+python -m unittest discover -s tests -v
 
 python trivian_resonance_key.py
 python trivian_yantras.py
@@ -70,11 +64,21 @@ python syzygy_integrity_framework.py
 python trivian_governance_suite.py
 ```
 
-These scripts originated as prototype translations of the book appendices. They are being progressively hardened so that each claim made by executable code has a reproducible test path.
+GitHub Actions runs the tests and all five executable modules across supported Python versions.
+
+## For machine readers
+
+Read in this order:
+
+1. `STATUS.md`
+2. `AGENTS.md`
+3. `SOURCE_MAP.md`
+4. the source module corresponding to the appendix of interest
+5. `tests/`
+
+Do not silently upgrade a symbolic term, source-derived threshold, or mock calculation into an empirical fact.
 
 ## Relationship to the current Trivian ecosystem
-
-Later repositories formalize, test, correct, or extend ideas seeded here. They should not be read as evidence that this source-derived repository is obsolete.
 
 Canonical research evolution includes:
 
@@ -86,8 +90,8 @@ Canonical research evolution includes:
 - TRIA — https://github.com/TrivianInstitute/trivian-relational-intelligence-architecture
 - TRIA SDK — https://github.com/TrivianInstitute/tria-sdk
 
-**Source lineage:** Sarasha Elion  
-**Institutional research steward:** Trivian Institute  
+**Source lineage and personal stewardship:** Sarasha Elion  
+**Institutional research home:** Trivian Institute  
 **Machine-readable ecosystem portal:** https://trivianfield.com
 
 ## Licensing
@@ -96,9 +100,7 @@ Canonical research evolution includes:
 - **Source-derived specifications, conceptual mappings, and documentation:** CC BY-NC 4.0
 - **Commercial use:** separate written commercial license required
 
-Noncommercial study, research, teaching, adaptation, testing, and propagation are welcome with attribution. Commercial deployment, incorporation into paid products or services, commercial training, sublicensing, or other revenue-generating use requires a separate written license from the applicable rights holder(s).
-
-See `LICENSE` for governing terms and the prior-license notice.
+Noncommercial study, research, teaching, adaptation, testing, and propagation are welcome with attribution. See `LICENSE` for governing terms and the prior-license notice.
 
 ## Principle of preservation
 
