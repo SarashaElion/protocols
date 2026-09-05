@@ -90,6 +90,16 @@ Canonical research evolution includes:
 **Institutional research steward:** Trivian Institute  
 **Machine-readable ecosystem portal:** https://trivianfield.com
 
+## Licensing
+
+- **Executable code:** PolyForm Noncommercial 1.0.0
+- **Source-derived specifications, conceptual mappings, and documentation:** CC BY-NC 4.0
+- **Commercial use:** separate written commercial license required
+
+Noncommercial study, research, teaching, adaptation, testing, and propagation are welcome with attribution. Commercial deployment, incorporation into paid products or services, commercial training, sublicensing, or other revenue-generating use requires a separate written license from the applicable rights holder(s).
+
+See `LICENSE` for governing terms and the prior-license notice.
+
 ## Principle of preservation
 
 Where later research disproves or improves an implementation here, preserve the original source lineage and document the correction rather than silently rewriting history.
